@@ -1,41 +1,59 @@
-# 纯Python实现CNN识别手写体数字+GUI
+# Python+Numpy+PyQt implement CNN to recognize handwritten number
 
-![](https://img.hamlinzheng.com/i/2020/02/07/psh0gw.png)
+## Overview
 
-
----
-
-> 由于把数据集也传上来了，导致下载时间比较长，我打包了一份放在服务器，点击[这里](https://dl.hamlinzheng.com/Python/MNIST.zip)进行下载
+![2022-11-28_17-29](image/mnist_gui.png)
 
 
-项目文件结构如下所示
+
+## How to run
+
+**Prerequisites**
+
+- Python3 (Tested in Python 3.8.10)
+- Pip
+- Venv
+
+### Run main GUI
+
+1. Create a Python virtual environment (*Optional*)
 
 ```
-.
-├── common
-│   ├── functions.py
-│   ├── gradient.py
-│   ├── layers.py
-│   ├── optimizer.py
-│   ├── trainer.py
-│   └── util.py
-├── dataset
-│   ├── mnist.pkl
-│   ├── mnist.py
-│   ├── t10k-images-idx3-ubyte.gz
-│   ├── t10k-labels-idx1-ubyte.gz
-│   ├── train-images-idx3-ubyte.gz
-│   └── train-labels-idx1-ubyte.gz
-├── deep_convnet_params.pkl
-├── deep_convnet.py
-├── mnist_cnn_gui_main.py
-├── params.pkl
-├── qt
-│   ├── layout.py
-│   ├── layout.ui
-│   ├── paintboard.py
-│   └── ui2py.sh
-├── simple_convnet.py
-├── train_convnet.py
-└── train_deepnet.py
+$ python3 -m venv venv
+$ source venv/bin/activate
 ```
+
+2. Install the required packages
+
+```
+$ pip install -r requirements.txt
+```
+
+3. Run the main GUI
+
+```
+$ python ./mnist_cnn_gui_main.py
+```
+
+> You can modify the network structure in `mnist_cnn_gui_main.py` file, and two networks are provided by default.
+
+
+### Train model
+
+Train Simple CNN:
+
+```
+$ python ./train_convnet.py
+```
+
+Train Deep CNN:
+
+```
+$ python ./train_deepnet.py
+```
+
+
+
+## Acknowledgement
+
+- 《深度学习入门-基于Python的理论与实现》

@@ -23,3 +23,5 @@ package-lock.json
 # python file
 venv
 *.log
+
+mnist.pkl
