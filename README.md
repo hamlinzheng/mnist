@@ -4,6 +4,7 @@
 
 ![2022-11-28_17-29](image/mnist_gui.png)
 
+For more presentations please visit: https://www.bilibili.com/video/BV127411b7hK
 
 
 ## How to run
